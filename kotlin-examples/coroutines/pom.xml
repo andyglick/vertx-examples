@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+  http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.vertx</groupId>
+  <parent>
+    <groupId>io.vertx</groupId>
+    <artifactId>vertx-examples</artifactId>
+    <version>4.2.0</version>
+  </parent>
+
   <artifactId>kotlin-coroutines-examples</artifactId>
   <version>4.2.0</version>
 
   <properties>
-    <slf4j.version>1.7.21</slf4j.version>
-    <kotlin.version>1.5.10</kotlin.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+
   </properties>
 
   <dependencies>
