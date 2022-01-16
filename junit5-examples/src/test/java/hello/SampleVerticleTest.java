@@ -24,7 +24,12 @@ import io.vertx.ext.web.codec.BodyCodec;
 import io.vertx.junit5.Checkpoint;
 import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
-import org.junit.jupiter.api.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -69,13 +74,11 @@ class SampleVerticleTest {
       for (int i = 0; i < 10; i++) {
         webClient.get(11981, "localhost", "/")
           .as(BodyCodec.string())
-          .send(testContext.succeeding(resp -> {
-            testContext.verify(() -> {
-              assertThat(resp.statusCode()).isEqualTo(200);
-              assertThat(resp.body()).contains("Yo!");
-              requestCheckpoint.flag();
-            });
-          }));
+          .send(testContext.succeeding(resp -> testContext.verify(() -> {
+            assertThat(resp.statusCode()).isEqualTo(200);
+            assertThat(resp.body()).contains("Yo!");
+            requestCheckpoint.flag();
+          })));
       }
     }));
   }

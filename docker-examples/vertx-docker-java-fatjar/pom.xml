@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+  http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.vertx</groupId>
+  <parent>
+    <groupId>io.vertx</groupId>
+    <artifactId>maven-verticles-examples</artifactId>
+    <version>4.2.0</version>
+  </parent>
+
   <artifactId>hello-verticle-fatjar</artifactId>
   <version>4.2.0</version>
 
@@ -19,7 +26,7 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
-      <version>${project.version}</version>
+      <version>${vertx.artifacts.version}</version>
     </dependency>
   </dependencies>
 
@@ -57,7 +64,7 @@
               </transformers>
               <artifactSet>
               </artifactSet>
-              <outputFile>${project.build.directory}/${project.artifactId}-${project.version}-fat.jar</outputFile>
+              <outputFile>${project.build.directory}/${project.artifactId}-${vertx.artifacts.version}-fat.jar</outputFile>
             </configuration>
           </execution>
         </executions>

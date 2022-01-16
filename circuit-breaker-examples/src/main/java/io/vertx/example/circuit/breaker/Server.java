@@ -15,5 +15,4 @@ public class Server extends AbstractVerticle {
     .requestHandler(req -> req.response().end("Bonjour"))
     .listen(8080);
   }
-
 }
