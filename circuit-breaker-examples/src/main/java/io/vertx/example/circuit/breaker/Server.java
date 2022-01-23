@@ -12,7 +12,7 @@ public class Server extends AbstractVerticle {
   @Override
   public void start() {
     vertx.createHttpServer()
-    .requestHandler(req -> req.response().end("Bonjour"))
-    .listen(8080);
+      .requestHandler(req -> req.response().end("Bonjour"))
+      .listen(8080);
   }
 }
