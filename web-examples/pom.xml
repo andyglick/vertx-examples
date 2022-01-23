@@ -15,10 +15,6 @@
   <artifactId>web-examples</artifactId>
   <version>4.2.0</version>
 
-  <properties>
-    <hsqldb.version>2.6.1</hsqldb.version>
-  </properties>
-
   <dependencies>
 
     <dependency>
