@@ -11,7 +11,6 @@
     <version>4.2.0</version>
   </parent>
 
-  <groupId>io.vertx</groupId>
   <artifactId>mail-examples</artifactId>
   <version>4.2.0</version>
 
@@ -29,7 +28,7 @@
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.4</version>
+      <version>${commons.io.version}</version>
     </dependency>
   </dependencies>
 

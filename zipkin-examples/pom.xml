@@ -16,7 +16,7 @@
   <version>4.2.0</version>
 
   <properties>
-    <vertx.artifacts.version>4.2.3</vertx.artifacts.version>
+    <vertx.artifacts.version>4.2.4</vertx.artifacts.version>
   </properties>
 
   <dependencies>
